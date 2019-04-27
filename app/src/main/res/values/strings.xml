@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Barna</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="action_settings">Opsione</string>
+    <string name="title_activity_side_menu">SideMenu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Barna</string>
+    <string name="nav_header_subtitle1">Agon Hoxha</string>
+    <string name="nav_header_subtitle2">Edona Haziraj</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_help">Ndihme</string>
+    <string name="menu_home">Kategorite</string>
+    <string name="menu_tools">Opsionet</string>
+    <string name="menu_share">Dergo</string>
+    <string name="menu_send">Play Store</string>
+    <string name="share">Shperndaje</string>
+    <string name="nav_help">Ndihme</string>
+    <string name="nav_about">Rreth Nesh</string>
+</resources>
