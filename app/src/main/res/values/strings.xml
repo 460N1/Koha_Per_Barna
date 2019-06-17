@@ -31,4 +31,9 @@
     <string name="btnNdrysho">Ndrysho</string>
     <string name="toastNdryshim">Ndryshimi me sukses</string>
     <string name="fail">Nuk ka barna, apo deshtoj leximi.</string>
+    <string name="label_scan_finger">Skano Gishtin</string>
+    <string name="hyrja_instruksion">Per te pasur qasje ne aplikacion, nevojitet identifikimi biometrik permes gishtit
+        qe e perdorni per t\'e hapur telefonin.
+    </string>
+    <string name="fingerprint_content_description">FingerPrint</string>
 </resources>
