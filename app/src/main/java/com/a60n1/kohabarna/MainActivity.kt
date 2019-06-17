@@ -13,6 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.google.android.gms.appinvite.AppInviteInvitation
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -97,6 +98,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 )
             }
             R.id.nav_about -> {
+                val intent = AppInviteInvitation.IntentBuilder("Koha per Barna")
+                    .setMessage("Shikojeni aplikacionin Koha per Barna! https://play.google.com/store/apps/com.a60n1.kohabarna")
+                    .setDeepLink(Uri.parse("https://play.google.com/store/apps/com.a60n1.kohabarna"))
+                    .setCallToActionText("Get it now!")
+                    .build()
+                startActivityForResult(intent, 101)
             }
         }
         drawer_layout.closeDrawer(GravityCompat.START)

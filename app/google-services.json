@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "354320293668",
+    "firebase_url": "https://kohabarna.firebaseio.com",
+    "project_id": "kohabarna",
+    "storage_bucket": "kohabarna.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354320293668:android:2f5d51e61cdb3114",
+        "android_client_info": {
+          "package_name": "com.a60n1.kohabarna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354320293668-bahoh5ltqf4nsrq6t2ecdns0sk8btu91.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.a60n1.kohabarna",
+            "certificate_hash": "4b032a02815e9ed4ab5565d6241fd1dcd6d2a2e1"
+          }
+        },
+        {
+          "client_id": "354320293668-5d76a78ek6n2j971v2ir1oj61mvu3qo9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwMzjRkaAkIjXbmSZE0TQhoduEt0RADjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354320293668-5d76a78ek6n2j971v2ir1oj61mvu3qo9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
