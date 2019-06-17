@@ -14,7 +14,7 @@ import com.multidots.fingerprintauth.FingerPrintAuthHelper
 import org.jetbrains.anko.toast
 
 class IntroActivity : AppCompatActivity(), FingerPrintAuthCallback {
-    lateinit var fingerprintHelper: FingerPrintAuthHelper
+    private lateinit var fingerprintHelper: FingerPrintAuthHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
@@ -28,14 +28,14 @@ class IntroActivity : AppCompatActivity(), FingerPrintAuthCallback {
 
     override fun onPause() {
         super.onPause()
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
             fingerprintHelper.stopAuth()
-        }
     }
 
     @SuppressLint("SetTextI18n")
     override fun onNoFingerPrintHardwareFound() {
         startActivity(applicationContext, Intent(applicationContext, MainActivity::class.java), null)
+        finish()
     }
 
     override fun onAuthFailed(errorCode: Int, errorMessage: String?) {
@@ -55,5 +55,6 @@ class IntroActivity : AppCompatActivity(), FingerPrintAuthCallback {
     override fun onAuthSuccess(cryptoObject: FingerprintManager.CryptoObject?) {
         toast("Authentication Success!")
         startActivity(applicationContext, Intent(applicationContext, MainActivity::class.java), null)
+        finish()
     }
 }
