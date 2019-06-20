@@ -17,10 +17,12 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 class WelcomeActivity : AppCompatActivity() {
-    private val prefs: SharedPreferences = this.getSharedPreferences("com.a60n1.kohabarna", Context.MODE_PRIVATE)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)
+        val prefs: SharedPreferences = this.getSharedPreferences("com.a60n1.kohabarna", Context.MODE_PRIVATE)
+        txtWelcome.visibility = View.INVISIBLE
+        mainLayout.visibility = View.INVISIBLE
         if (!prefs.contains("1stTime")) {
             fadeItems(pillsIMG, txtWelcome, mainLayout)
             btnTandC.setOnClickListener {
