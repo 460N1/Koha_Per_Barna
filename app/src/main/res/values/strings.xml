@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Barna</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="action_settings">Opsione</string>
@@ -42,4 +42,100 @@
     </string>
     <string name="btn_qands">Dergo</string>
     <string name="nav_email">Pyetje dhe Sygjerime</string>
+    <string name="not_accepted">Duhet te pranohen kushtet!</string>
+    <string name="txtWelcome">Miresevini!</string>
+    <string name="txtOpsionet">Percaktoni Opsionet</string>
+    <string name="txtDarkMode">Dark Mode</string>
+    <string name="txtSiguria">Siguria</string>
+    <string name="txtDMExplain">Aplikacioni merr ngjyra te zeza</string>
+    <string name="txtSigExplain">Aplikacioni mbrohet permes gishtit tuaj.</string>
+    <string name="terms_conditions" tools:ignore="TypographyOther,Typos">Këto terma dhe kushte (\"termat\",
+        \"marrëveshje\")
+        janë një marrëveshje midis
+        zhvilluesit të aplikacioneve mobile (\"mobile application developer\", \"ne\", \"ne\" ose \"tonë\") dhe ju (\"
+        \"juaj\"). Kjo marrëveshje përcakton kushtet dhe kushtet e përgjithshme të përdorimit tuaj të aplikacionit
+        celular koha për barna dhe të ndonjë prej produkteve ose shërbimeve të saj (kolektivisht, \"aplikacion mobile\"
+        ose \"shërbime\"). Backups Ne nuk jemi përgjegjës për përmbajtjen që gjendet në aplikacionin celular. Në asnjë
+        rast nuk do të jemi përgjegjës për ndonjë humbje të ndonjë përmbajtjeje. Është përgjegjësia juaj e vetme që të
+        mbani kopjen e duhur të përmbajtjes suaj. Pavarësisht nga sa më sipër, në disa raste dhe në rrethana të
+        caktuara, me absolutisht asnjë detyrim, ne mund të jemi në gjendje të rivendosim disa ose të gjitha të dhënat
+        tuaja që janë fshirë nga një datë dhe kohë e caktuar kur ne mund të kemi kopjuar të dhënat për të qëllime. Ne
+        nuk bëjmë asnjë garanci se të dhënat që ju duhen do të jenë në dispozicion. Lidhje me aplikacione të tjera
+        celulare Megjithëse ky aplikacion mund të lidhet me aplikacionet e tjera celulare, ne nuk jemi të drejtpërdrejtë
+        ose të tërthortë duke nënkuptuar ndonjë miratim, shoqatë, sponsorizim, miratim ose lidhje me ndonjë aplikacion
+        të lidhur celular, përveç rasteve kur shprehimisht specifikohen këtu. Ne nuk jemi përgjegjës për shqyrtimin ose
+        vlerësimin, dhe ne nuk garantojmë ofertat e, bizneseve apo individëve ose përmbajtjen e aplikacioneve të tyre
+        celulare. Ne nuk marrim asnjë përgjegjësi ose përgjegjësi për veprimet, produktet, shërbimet dhe përmbajtjen e
+        ndonjë pale të tretë. Ju duhet të rishikoni me kujdes deklaratat ligjore dhe kushtet e tjera të përdorimit të
+        çdo aplikacioni celular të cilin e keni në aksesin nëpërmjet një lidhjeje nga ky aplikacion mobil. Lidhja juaj
+        me ndonjë aplikacion tjetër celular jashtë është në rrezikun tuaj. Përdorime të ndaluara Përveç kushteve të
+        tjera të përcaktuara në marrëveshje, ju nuk keni të drejtë të përdorni aplikacionin mobil ose përmbajtjen e tij:
+        (a) për çdo qëllim të paligjshëm; (b) të kërkojë të tjerët të kryejnë ose të marrin pjesë në ndonjë akt të
+        paligjshëm; (c) të shkelë ndonjë rregullore ndërkombëtare, federale, provinciale ose shtetërore, rregulla, ligje
+        ose ordinanca lokale; (d) të shkelë ose të shkelë të drejtat tona të pronësisë intelektuale ose të drejtat e
+        pronësisë intelektuale të të tjerëve; (e) të ngacmojnë, abuzojnë, fyejnë, dëmtojnë, shpifin, shpifin,
+        poshtërojnë, frikësojnë ose diskriminojnë në bazë të gjinisë, orientimit seksual, fesë, përkatësisë etnike,
+        racës, moshës, origjinës kombëtare ose paaftësisë; (f) të paraqesin informata të rreme ose mashtruese; (g) të
+        ngarkojë ose transmetojë viruse ose ndonjë lloj tjetër të kodit keqdashës që do të përdoret ose mund të përdoret
+        në çfarëdo mënyre që do të ndikojë në funksionimin ose funksionimin e shërbimit ose të ndonjë aplikacioni tjetër
+        celular, aplikacioneve të tjera celulare ose në internet; (h) të mbledhë ose të ndjekë të dhënat personale të të
+        tjerëve; (i) të spam, phish, pharm, pretekst, merimangë, zvarritje, ose hallë; (j) për çdo qëllim të turpshëm
+        ose të pamoralshëm; ose (k) të ndërhyjë ose të anashkalojë tiparet e sigurisë të shërbimit ose ndonjë
+        aplikacioni tjetër celular, aplikacioneve të tjera celulare, ose internetit. Ne rezervojmë të drejtën të
+        ndërpresim përdorimin tuaj të shërbimit ose ndonjë aplikacioni tjetër celular për shkeljen e ndonjë përdorimi të
+        ndaluar. Të drejtat e pronësisë intelektuale Kjo marrëveshje nuk ju transferon asnjë pronë intelektuale në
+        pronësi të zhvilluesit të aplikacioneve celulare ose palëve të treta dhe të gjitha të drejtat, titujt dhe
+        interesat në dhe për këtë pronë do të mbeten vetëm ndërmjet mobile application developer. Të gjitha markat
+        tregtare, shenjat e shërbimit, grafika dhe logot e përdorura në lidhje me aplikacionin ose shërbimet tona mobile
+        janë marka tregtare ose marka tregtare të regjistruara të aplikacioneve për zhvilluesit e aplikacioneve të
+        celularëve ose të aplikacioneve për zhvilluesit e aplikacioneve mobile. Markat e tjera tregtare, shenjat e
+        shërbimit, grafikat dhe logot e përdorura në lidhje me aplikacionin ose shërbimet tona mobile mund të jenë
+        markat tregtare të palëve të treta. Përdorimi i aplikacionit dhe shërbimeve mobile nuk ju jep asnjë të drejtë
+        ose licencë për të riprodhuar ose përndryshe të përdorë ndonjë zhvillues të aplikacioneve të celularit ose
+        markave të palëve të treta. Kufizimi i përgjegjësisë Në një masë të plotë të lejuar nga ligji i aplikueshëm, në
+        asnjë rast, zhvilluesi i aplikacioneve për celular, bashkëpunëtorët, oficerët, drejtorët, punonjësit, agjentët,
+        furnizuesit ose liçensuesit nuk do t\'i nënshtrohen ndonjë personi për (a): çdo indirekte, rastësore, speciale,
+        (përfshirë, pa kufizim, dëmtimet për fitimet e humbura, të ardhurat, shitjet, vullnetin e mirë, përdorimin ose
+        përmbajtjen, ndikimin në biznes, ndërprerjen e biznesit, humbjen e kursimeve të parashikuara, humbjen e
+        mundësive të biznesit) , duke përfshirë, pa kufizim, kontratë, tortë, garanci, shkelje të detyrës statutore,
+        neglizhencë ose ndryshe, edhe nëse zhvilluesi i aplikacionit për celularë është këshilluar për mundësinë e
+        dëmeve të tilla ose mund të ketë parashikuar dëmtime të tilla. Në masën maksimale të lejuar nga ligji i
+        zbatueshëm, përgjegjësia e agreguar e zhvilluesit të aplikacioneve mobile dhe bashkëpunëtorët, zyrtarët,
+        punonjësit, agjentët e saj. Aplikuesit dhe licensuesit, që kanë të bëjnë me shërbimet, do të kufizohen në një
+        shumë më të madhe prej një dollar ose në ndonjë shumë të paguar në të holla nga ju tek zhvilluesi i aplikimit
+        mobile për periudhën para një muaji para ngjarjes së parë ose ngjarjes që ka shkaktuar një përgjegjësi të tillë.
+        Kufizimet dhe përjashtimet gjithashtu zbatohen nëse kjo zgjidhje nuk ju kompenson plotësisht për ndonjë humbje
+        ose nuk i përmbush qëllimet e saj esenciale. Dëmshpërblim Ju pranoni të zhdëmtojnë dhe mbajnë zhvilluesit e
+        aplikacioneve për celularë dhe bashkëpunëtorët, drejtorët, zyrtarët, punonjësit dhe agjentët e tyre të padëmtuar
+        nga dhe kundër çdo detyrimi, humbjeje, dëmshpërblimi ose shpenzimi, duke përfshirë pagesat e avokatëve të
+        arsyeshëm, pretendimet, pretendimet, veprimet, mosmarrëveshjet ose kërkesat e parashtruara ndaj asnjërit prej
+        tyre si rezultat i ose që kanë të bëjnë me përmbajtjen tuaj, përdorimin tuaj të aplikacionit ose shërbimeve
+        mobile ose ndonjë sjellje të pahijshme nga ana juaj. Mbetja ne efekt e pjesshme Të gjitha të drejtat dhe
+        kufizimet e përmbajtura në këtë marrëveshje mund të ushtrohen dhe do të jenë të zbatueshme dhe të detyrueshme
+        vetëm në atë masë që nuk shkelin ligje të aplikueshme dhe kanë për qëllim të kufizohen në masën e nevojshme në
+        mënyrë që ata të mos e bëjnë këtë marrëveshje të paligjshme, të pavlefshme ose të pazbatueshme. Nëse ndonjë
+        dispozitë ose pjesë e ndonjë dispozite të kësaj marrëveshjeje do të konsiderohet e paligjshme, e pavlefshme ose
+        e pazbatueshme nga një gjykatë kompetente, është qëllimi i palëve që dispozitat e mbetura ose pjesët e tyre të
+        përbëjnë marrëveshjen e tyre në lidhje me lënda në fjalë, dhe të gjitha këto dispozita ose pjesë të mbetura të
+        tyre mbeten në fuqi dhe efekt të plotë. Zgjidhjen e kontesteve Formimi, interpretimi dhe zbatimi i kësaj
+        marrëveshjeje dhe çdo mosmarrëveshje që rrjedhin prej saj do të rregullohen nga ligjet thelbësore dhe
+        procedurale të tiranës, shqipëria pa marrë parasysh rregullat e saj mbi konfliktet ose zgjedhjen e ligjit dhe në
+        masën e zbatueshme ligjet e shqipërisë. Juridiksioni ekskluziv dhe vendi i veprimeve që kanë të bëjnë me lëndën
+        në fjalë janë gjykatat shtetërore dhe federale të vendosura në tiranë, shqipëri, dhe ju dorëzoni në
+        juridiksionin personal të këtyre gjykatave. Me këtë rast, hiqni çdo të drejtë në gjyqin e jurisë në çdo
+        procedurë që rrjedh nga ose që lidhet me këtë marrëveshje. Konventa e kombeve të bashkuara mbi kontratat për
+        shitjen ndërkombëtare të mallrave nuk zbatohet në këtë marrëveshje. Ndryshimet Ne rezervojmë të drejtën për të
+        ndryshuar këtë marrëveshje ose politikat e saj në lidhje me aplikacionin ose shërbimet mobile në çdo kohë,
+        efektiv pas publikimit të një versioni të përditësuar të kësaj marrëveshjeje në aplikacionin mobil. Kur bëjmë,
+        do të bëjmë një njoftim në aplikacionin tonë celular. Përdorimi i vazhdueshëm i aplikacionit mobile pas çdo
+        ndryshimi të tillë përbën pëlqimin tuaj për këto ndryshime. Pranimi i këtyre kushteve Ju pranoni se keni lexuar
+        këtë marrëveshje dhe pajtoheni me të gjitha kushtet dhe kushtet e saj. Duke përdorur aplikacionin mobile ose
+        shërbimet e tij pranoni të jeni të detyruar nga kjo marrëveshje. Nëse nuk pranoni të respektoni kushtet e kësaj
+        marrëveshjeje, nuk jeni i autorizuar për të përdorur ose për të hyrë në aplikacionin mobil dhe shërbimet e tij.
+        Na kontaktoni Nëse keni ndonjë pyetje në lidhje me këtë marrëveshje, ju lutemi na kontaktoni.
+    </string>
+    <string name="t_c">Termat dhe kushtet</string>
+    <string name="accept_conditions">Kam lexuar dhe i pranoj kushtet</string>
+    <string name="btn_accept">Vazhdo</string>
+    <string name="content_desc_pills">Foto gjate hapjes se app per here te pare</string>
 </resources>
