@@ -115,7 +115,7 @@
                 android:text="@string/btn_accept"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/btnTandC"
-                android:background="@color/backgroundColor"/>
+                android:background="#BBB"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

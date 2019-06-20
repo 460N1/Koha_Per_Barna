@@ -45,10 +45,10 @@
     <string name="not_accepted">Duhet te pranohen kushtet!</string>
     <string name="txtWelcome">Miresevini!</string>
     <string name="txtOpsionet">Percaktoni Opsionet</string>
-    <string name="txtDarkMode">Dark Mode</string>
+    <string name="txtDarkMode">Notifikacione</string>
     <string name="txtSiguria">Siguria</string>
-    <string name="txtDMExplain">Aplikacioni merr ngjyra te zeza</string>
-    <string name="txtSigExplain">Aplikacioni mbrohet permes gishtit tuaj.</string>
+    <string name="txtDMExplain">Aplikacioni lejon notifikacione dhe alarme</string>
+    <string name="txtSigExplain">Nese perkrahet, mbrohet me shenje te gishtit.</string>
     <string name="terms_conditions" tools:ignore="TypographyOther,Typos">Këto terma dhe kushte (\"termat\",
         \"marrëveshje\")
         janë një marrëveshje midis
