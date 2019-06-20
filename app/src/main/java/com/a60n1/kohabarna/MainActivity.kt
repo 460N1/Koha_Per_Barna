@@ -109,6 +109,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     .build()
                 startActivityForResult(intent, 101)
             }
+            R.id.nav_email -> {
+                startActivity(Intent(this@MainActivity, SuggestionsQuestions::class.java))
+            }
         }
         drawer_layout.closeDrawer(GravityCompat.START)
         return true

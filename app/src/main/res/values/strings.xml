@@ -36,4 +36,10 @@
         qe e perdorni per t\'e hapur telefonin.
     </string>
     <string name="fingerprint_content_description">FingerPrint</string>
+    <string name="txtVQandS">Pyetje dhe Sygjerime</string>
+    <string name="txt_qands_comment">Duke qene te kushtuar ndaj ofrimit te nje zgjidhje sa me te mire per perdoruesit
+        tone, mundesojme parashtrimin e kerkesave, komenteve, sygjerime dhe pyetjeve qe mund t\'i keni.
+    </string>
+    <string name="btn_qands">Dergo</string>
+    <string name="nav_email">Pyetje dhe Sygjerime</string>
 </resources>
