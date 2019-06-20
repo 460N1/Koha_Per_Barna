@@ -51,7 +51,7 @@
             <Switch
                     android:text="@string/txtDarkMode"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/swiDarkMode" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:id="@+id/swiNotifications" android:layout_weight="1"
                     android:paddingLeft="16dp" android:paddingRight="40dp" android:background="@color/backgroundColor"
                     android:paddingStart="16dp" android:paddingEnd="40dp"/>
             <Switch
@@ -69,7 +69,7 @@
             <TextView
                     android:text="@string/txtDMExplain"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/txtDarkMode" android:layout_weight="1"
+                    android:layout_height="wrap_content" android:id="@+id/txtNotifications" android:layout_weight="1"
                     android:paddingLeft="16dp" android:paddingRight="16dp" android:background="@color/backgroundColor"/>
             <TextView
                     android:text="@string/txtSigExplain"

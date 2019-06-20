@@ -23,12 +23,15 @@ class WelcomeActivity : AppCompatActivity() {
         val prefs: SharedPreferences = this.getSharedPreferences("com.a60n1.kohabarna", Context.MODE_PRIVATE)
         txtWelcome.visibility = View.INVISIBLE
         mainLayout.visibility = View.INVISIBLE
-        if (!prefs.contains("1stTime")) {
+        if (!prefs.contains("hera1")) {
             fadeItems(pillsIMG, txtWelcome, mainLayout)
             btnTandC.setOnClickListener {
                 if (chxAccepted.isChecked) {
-                    prefs.edit().putBoolean("1stTime", false).apply()
-                    startActivity(Intent(this, IntroActivity::class.java))
+                    prefs.edit().putBoolean("hera1", false).apply()
+                    prefs.edit().putBoolean("siguria", swiSiguria.isChecked).apply()
+                    prefs.edit().putBoolean("notify", swiNotifications.isChecked).apply()
+                    if (swiSiguria.isChecked) startActivity(Intent(this, IntroActivity::class.java))
+                    else startActivity(Intent(this, MainActivity::class.java))
                     finish()
                     //Toast.makeText(this@MainActivity,prefs.getBoolean("firstTime",true).toString(),Toast.LENGTH_LONG).show()
                 } else {
@@ -37,7 +40,8 @@ class WelcomeActivity : AppCompatActivity() {
             }
         } else {
             pillsIMG.visibility = View.INVISIBLE
-            startActivity(Intent(this, IntroActivity::class.java))
+            if (prefs.getBoolean("siguria", true)) startActivity(Intent(this, IntroActivity::class.java))
+            else startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
     }
