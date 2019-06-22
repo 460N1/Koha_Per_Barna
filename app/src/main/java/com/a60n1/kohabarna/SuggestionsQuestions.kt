@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_suggestions_questions.*
 
-
 class SuggestionsQuestions : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

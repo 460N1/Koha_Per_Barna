@@ -32,8 +32,8 @@ class NotificationService : IntentService("NotificationService") {
     }
 
     companion object {
-        const val CHANNEL_ID = "samples.notification.devdeeds.com.CHANNEL_ID"
-        const val CHANNEL_NAME = "Sample Notification"
+        const val CHANNEL_ID = "com.a60n1.kohabarna.CHANNEL_ID"
+        const val CHANNEL_NAME = "Lajmrimet"
     }
 
     override fun onHandleIntent(intent: Intent?) {
@@ -46,9 +46,9 @@ class NotificationService : IntentService("NotificationService") {
             val notificationManager: NotificationManager =
                 getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             val notifyIntent = Intent(this, MainActivity::class.java)
-            val title = "Koha per barna!"
+            val title = getString(R.string.notification_title)
             val message =
-                "Keni barna qe duhet te perdorni tani!"
+                getString(R.string.notification_text)
             notifyIntent.putExtra("title", title)
             notifyIntent.putExtra("message", message)
             notifyIntent.putExtra("notification", true)

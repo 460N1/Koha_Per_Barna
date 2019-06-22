@@ -141,4 +141,12 @@
     <string name="notification">Koha per Barna!</string>
     <string name="notification_channel_description">Keni barna qe duhet te perdorni tani.</string>
     <string name="doza_hint">Numri i dozave</string>
+    <string name="toast_njoftim">Do te njoftoheni kur te duhet te perdoret barna</string>
+    <string name="r_u_sure">A jeni te sigurte qe deshironi t\'e fshini kete barne?</string>
+    <string name="fshirje_title">Fshirje</string>
+    <string name="delete_success">Barna e zgjedhur eshte fshire nga databaza.</string>
+    <string name="delete_fail">Barna nuk eshte fshire.</string>
+    <string name="delete_cancel">Nuk ka pasur ndryshime.</string>
+    <string name="notification_text">Keni barna qe duhet te perdorni tani!</string>
+    <string name="notification_title">Koha per barna!</string>
 </resources>

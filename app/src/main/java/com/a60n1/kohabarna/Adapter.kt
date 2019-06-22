@@ -35,8 +35,8 @@ class Adapter(var context: Context, data: ArrayList<Barna>) : RecyclerView.Adapt
         holder.doktori.text = data[position].doktori
         holder.btnDel.setOnClickListener {
             val builder = AlertDialog.Builder(context)
-            builder.setTitle("Fshirje")
-            builder.setMessage("A jeni te sigurte qe deshironi t'e fshini kete barne?")
+            builder.setTitle(context.getString(R.string.fshirje_title))
+            builder.setMessage(context.getString(R.string.r_u_sure))
             builder.setIcon(R.drawable.ic_delete)
             builder.setPositiveButton("PO") { _, _ ->
                 SQLHelper(context)
@@ -47,13 +47,13 @@ class Adapter(var context: Context, data: ArrayList<Barna>) : RecyclerView.Adapt
                         arrayOf(holder.id.text.toString())
                     )
                 holder.cardItem.visibility = View.GONE
-                Toast.makeText(context, "Barna e zgjedhur eshte fshire nga databaza.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.delete_success), Toast.LENGTH_SHORT).show()
             }
             builder.setNegativeButton("Jo") { _, _ ->
-                Toast.makeText(context, "Barna nuk eshte fshire.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.delete_fail), Toast.LENGTH_SHORT).show()
             }
             builder.setNeutralButton("Kthehu") { _, _ ->
-                Toast.makeText(context, "Nuk ka pasur ndryshime.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, context.getString(R.string.delete_cancel), Toast.LENGTH_SHORT).show()
             }
             val dialog: AlertDialog = builder.create()
             dialog.show()

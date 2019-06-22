@@ -2,7 +2,6 @@ package com.a60n1.kohabarna
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -13,11 +12,13 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class ShtoNdrysho : AppCompatActivity() {
-    private val prefs: SharedPreferences = this.getSharedPreferences("com.a60n1.kohabarna", Context.MODE_PRIVATE)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shto_ndrysho)
+        val prefs = this.getSharedPreferences("com.a60n1.kohabarna", Context.MODE_PRIVATE)
         val db = SQLHelper(applicationContext)
+        if (!prefs.getBoolean("notify", false))
+            idDoza.visibility = View.INVISIBLE
         try {
             if (intent.getStringExtra("id").isNotEmpty()) {
                 etEmri.setText(intent.getStringExtra("emri"))
@@ -62,9 +63,7 @@ class ShtoNdrysho : AppCompatActivity() {
                 val dataFText = etDataF.text.toString().trim()
                 val dataMText = etDataM.text.toString().trim()
                 val doktoriText = etDoktori.text.toString().trim()
-                if (!prefs.getBoolean("notify", true)) {
-                    idDoza.visibility = View.INVISIBLE
-                } else {
+                if (prefs.getBoolean("notify", false)) {
                     val sdf = SimpleDateFormat("dd-MM-yyyy")
                     val dateStart = sdf.parse(dataFText)
                     val dateEnd = sdf.parse(dataMText)
@@ -79,7 +78,7 @@ class ShtoNdrysho : AppCompatActivity() {
                     }
                     Toast.makeText(
                         this@ShtoNdrysho,
-                        "Do te njoftoheni kur te duhet te perdoret barna",
+                        getString(R.string.toast_njoftim),
                         Toast.LENGTH_LONG
                     ).show()
                 }
