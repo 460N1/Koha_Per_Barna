@@ -138,4 +138,7 @@
     <string name="accept_conditions">Kam lexuar dhe i pranoj kushtet</string>
     <string name="btn_accept">Vazhdo</string>
     <string name="content_desc_pills">Foto gjate hapjes se app per here te pare</string>
+    <string name="notification">Koha per Barna!</string>
+    <string name="notification_channel_description">Keni barna qe duhet te perdorni tani.</string>
+    <string name="doza_hint">Numri i dozave</string>
 </resources>

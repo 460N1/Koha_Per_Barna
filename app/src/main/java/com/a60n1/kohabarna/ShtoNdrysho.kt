@@ -1,13 +1,19 @@
 package com.a60n1.kohabarna
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_shto_ndrysho.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class ShtoNdrysho : AppCompatActivity() {
+    private val prefs: SharedPreferences = this.getSharedPreferences("com.a60n1.kohabarna", Context.MODE_PRIVATE)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shto_ndrysho)
@@ -56,6 +62,27 @@ class ShtoNdrysho : AppCompatActivity() {
                 val dataFText = etDataF.text.toString().trim()
                 val dataMText = etDataM.text.toString().trim()
                 val doktoriText = etDoktori.text.toString().trim()
+                if (!prefs.getBoolean("notify", true)) {
+                    idDoza.visibility = View.INVISIBLE
+                } else {
+                    val sdf = SimpleDateFormat("dd-MM-yyyy")
+                    val dateStart = sdf.parse(dataFText)
+                    val dateEnd = sdf.parse(dataMText)
+                    val xIntakes = idDoza.text.toString().trim().toInt()
+                    val intakeEvery = 3600000 * 24 / xIntakes //1hour->3.6M milliseconds
+                    val nDays = //Number of Days that the user will use the medication
+                        (dateEnd.time / (24 * 60 * 60 * 1000) - (dateStart.time / (24 * 60 * 60 * 1000)).toInt()).toInt()
+                    var mNotificationTime = Calendar.getInstance().timeInMillis // + firstIntake
+                    for (i in 1..nDays * 24 / xIntakes) {
+                        mNotificationTime += i * intakeEvery
+                        NotificationUtils().setNotification(mNotificationTime, this@ShtoNdrysho)
+                    }
+                    Toast.makeText(
+                        this@ShtoNdrysho,
+                        "Do te njoftoheni kur te duhet te perdoret barna",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
                 db.addData(
                     emriText,
                     pershkrimiText,

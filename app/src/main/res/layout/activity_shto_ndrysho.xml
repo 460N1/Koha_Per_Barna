@@ -71,12 +71,21 @@
                     android:gravity="center_horizontal"
                     android:autofillHints=""
                     tools:targetApi="o"/>
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/idDoza"
+                    android:hint="@string/doza_hint"
+                    android:gravity="center_horizontal"
+                    tools:ignore="Autofill"/>
         </LinearLayout>
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="40dp"
                 android:layout_weight="1"
                 android:weightSum="4">
             <TextView
