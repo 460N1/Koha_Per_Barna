@@ -23,18 +23,19 @@
     <LinearLayout
             android:orientation="vertical"
             android:id="@+id/mainLayout"
-            android:layout_width="395dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintTop_toBottomOf="@+id/txtWelcome" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp" android:background="@color/backgroundColor">
+            android:layout_marginTop="16dp" android:background="@color/backgroundColor" android:weightSum="20"
+    >
         <View
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@android:color/black"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"/>
+                android:layout_marginRight="16dp" android:layout_weight="0"/>
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,12 +43,13 @@
                 android:textSize="24sp"
                 android:id="@+id/txtOptions"
                 android:layout_marginStart="8dp" android:gravity="center_horizontal"
-                android:background="@color/backgroundColor" android:layout_marginLeft="8dp"/>
+                android:background="@color/backgroundColor" android:layout_weight="1" android:layout_marginLeft="8dp"/>
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:weightSum="2" android:padding="8dp"
-                android:paddingLeft="16dp" android:paddingRight="16dp" android:background="@color/backgroundColor">
+                android:paddingLeft="16dp" android:paddingRight="16dp" android:background="@color/backgroundColor"
+                android:layout_weight="1">
             <Switch
                     android:text="@string/txtDarkMode"
                     android:layout_width="match_parent"
@@ -65,7 +67,8 @@
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:weightSum="2" android:padding="8dp"
-                android:paddingLeft="24dp" android:paddingRight="24dp" android:background="@color/backgroundColor">
+                android:paddingLeft="24dp" android:paddingRight="24dp" android:background="@color/backgroundColor"
+                android:layout_weight="1">
             <TextView
                     android:text="@string/txtDMExplain"
                     android:layout_width="match_parent"
@@ -83,7 +86,7 @@
                 android:layout_height="1dp"
                 android:background="@android:color/black"
                 android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"/>
+                android:layout_marginRight="16dp" android:layout_weight="0"/>
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,11 +94,11 @@
                 android:textSize="24sp"
                 android:id="@+id/txtTandCtitle"
                 android:layout_marginStart="8dp" android:gravity="center_horizontal"
-                android:background="@color/backgroundColor" android:layout_marginLeft="8dp"/>
+                android:background="@color/backgroundColor" android:layout_weight="1" android:layout_marginLeft="8dp"/>
         <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="314dp" android:paddingTop="8dp" android:paddingBottom="8dp"
-                android:background="@color/backgroundColor">
+                android:paddingTop="8dp" android:paddingBottom="8dp"
+                android:background="@color/backgroundColor" android:layout_weight="10" android:layout_height="0dp">
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                           android:orientation="vertical" android:background="@color/backgroundColor">
                 <TextView
@@ -110,12 +113,12 @@
                 android:text="@string/accept_conditions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/chxAccepted"
-                android:background="@color/backgroundColor"/>
+                android:background="@color/backgroundColor" android:layout_weight="1"/>
         <Button
                 android:text="@string/btn_accept"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/btnTandC"
-                android:background="#BBB"/>
+                android:background="#BBB" android:layout_weight="1"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

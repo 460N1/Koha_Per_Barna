@@ -33,9 +33,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         fabRem.setOnClickListener {
             Toast.makeText(this@MainActivity, "Reminder was pressed", Toast.LENGTH_SHORT).show()
-        }
-        fabCal.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Calendar was pressed", Toast.LENGTH_SHORT).show()
+            //TODO: MUTE NOTIFICATION FUNCTION
         }
         val navView: NavigationView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
@@ -76,9 +74,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_home -> {
-            }
             R.id.nav_tools -> {
+                //TODO:CREATE ACTIVITY FOR OPTIONS
             }
             R.id.nav_playstore -> {
                 val appPackageName = packageName // getPackageName() from Context or Activity object
@@ -101,7 +98,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     )
                 )
             }
-            R.id.nav_about -> {
+            R.id.nav_share -> {
                 val intent = AppInviteInvitation.IntentBuilder("Koha per Barna")
                     .setMessage("Shikojeni aplikacionin Koha per Barna! https://play.google.com/store/apps/com.a60n1.kohabarna")
                     .setDeepLink(Uri.parse("https://play.google.com/store/apps/com.a60n1.kohabarna"))
