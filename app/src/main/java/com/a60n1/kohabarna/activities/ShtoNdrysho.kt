@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.activities
 
 import android.content.Context
 import android.content.Intent
@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.a60n1.kohabarna.R
+import com.a60n1.kohabarna.db.SQLHelper
+import com.a60n1.kohabarna.notifications.NotificationUtils
 import kotlinx.android.synthetic.main.activity_shto_ndrysho.*
 import java.text.SimpleDateFormat
 import java.util.*

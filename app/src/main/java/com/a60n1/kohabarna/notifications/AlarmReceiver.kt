@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.notifications
 
 import android.content.BroadcastReceiver
 import android.content.Context

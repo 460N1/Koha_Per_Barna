@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.activities
 
 import android.content.Intent
 import android.database.Cursor
@@ -10,10 +10,13 @@ import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import com.a60n1.kohabarna.R
+import com.a60n1.kohabarna.db.Adapter
+import com.a60n1.kohabarna.db.Barna
+import com.a60n1.kohabarna.db.SQLHelper
 import com.google.android.gms.appinvite.AppInviteInvitation
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -57,18 +60,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 finishAndRemoveTask()
             else
                 super.onBackPressed()
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
         }
     }
 

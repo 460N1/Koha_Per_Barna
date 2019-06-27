@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.db
 
 import android.content.ContentValues
 import android.content.Context
@@ -6,7 +6,10 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class SQLHelper(context: Context) : SQLiteOpenHelper(context, DB_name, null, 1) {
+class SQLHelper(context: Context) : SQLiteOpenHelper(
+    context,
+    DB_name, null, 1
+) {
     companion object {
         const val DB_name = "barna.db "
         const val TB_name = "Barna "

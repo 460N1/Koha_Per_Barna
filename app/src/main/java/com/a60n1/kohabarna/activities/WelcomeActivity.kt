@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.activities
 
 import android.content.Context
 import android.content.Intent
@@ -14,6 +14,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import com.a60n1.kohabarna.R
 import kotlinx.android.synthetic.main.activity_welcome.*
 
 class WelcomeActivity : AppCompatActivity() {

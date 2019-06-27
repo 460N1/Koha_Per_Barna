@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.db
 
 import android.app.AlertDialog
 import android.content.Context
@@ -12,7 +12,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import com.a60n1.kohabarna.SQLHelper.Companion.TB_name
+import com.a60n1.kohabarna.R
+import com.a60n1.kohabarna.activities.ShtoNdrysho
+import com.a60n1.kohabarna.db.SQLHelper.Companion.TB_name
 
 class Adapter(var context: Context, data: ArrayList<Barna>) : RecyclerView.Adapter<Adapter.ViewHolder>() {
     var data: List<Barna>
@@ -23,7 +25,13 @@ class Adapter(var context: Context, data: ArrayList<Barna>) : RecyclerView.Adapt
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_barna, parent, false))
+        return ViewHolder(
+            LayoutInflater.from(context).inflate(
+                R.layout.item_barna,
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.notifications
 
 import android.annotation.SuppressLint
 import android.app.*
@@ -8,6 +8,8 @@ import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.media.RingtoneManager
 import android.os.Build
+import com.a60n1.kohabarna.R
+import com.a60n1.kohabarna.activities.MainActivity
 import java.util.*
 
 @Suppress("DEPRECATION")
@@ -20,7 +22,10 @@ class NotificationService : IntentService("NotificationService") {
             val context = this.applicationContext
             val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             val importance = NotificationManager.IMPORTANCE_HIGH
-            val notificationChannel = NotificationChannel(CHANNEL_ID, CHANNEL_NAME, importance)
+            val notificationChannel = NotificationChannel(
+                CHANNEL_ID,
+                CHANNEL_NAME, importance
+            )
             notificationChannel.enableVibration(true)
             notificationChannel.setShowBadge(true)
             notificationChannel.enableLights(true)
@@ -59,7 +64,10 @@ class NotificationService : IntentService("NotificationService") {
             val res = this.resources
             val uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                mNotification = Notification.Builder(this, CHANNEL_ID)
+                mNotification = Notification.Builder(
+                    this,
+                    CHANNEL_ID
+                )
                     // Set the intent that will fire when the user taps the notification
                     .setContentIntent(pendingIntent)
                     .setSmallIcon(R.drawable.ic_stat_name)

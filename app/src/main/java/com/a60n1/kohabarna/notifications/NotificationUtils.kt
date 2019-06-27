@@ -1,4 +1,4 @@
-package com.a60n1.kohabarna
+package com.a60n1.kohabarna.notifications
 
 import android.app.Activity
 import android.app.AlarmManager
