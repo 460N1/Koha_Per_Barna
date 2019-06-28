@@ -41,8 +41,8 @@
     <string name="btn_qands">Dërgo</string>
     <string name="nav_email">Pyetje dhe Sygjerime</string>
     <string name="not_accepted">Duhet te pranohen kushtet!</string>
-    <string name="txtWelcome">Miresevini!</string>
-    <string name="txtOpsionet">Percaktoni Opsionet</string>
+    <string name="txtWelcome">Mirësevini!</string>
+    <string name="txtOpsionet">Përcaktoni Opsionet</string>
     <string name="txtDarkMode">Notifikacione</string>
     <string name="txtSiguria">Siguria</string>
     <string name="txtDMExplain">Aplikacioni lejon krijimin e barnave me notifikacione</string>

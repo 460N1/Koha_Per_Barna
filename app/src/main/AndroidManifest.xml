@@ -16,10 +16,10 @@
                 android:parentActivityName=".activities.MainActivity"/>
         <activity
                 android:name=".activities.WelcomeActivity"
+                android:theme="@style/AppTheme.NoActionBar"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

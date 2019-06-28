@@ -15,7 +15,7 @@
             android:src="@drawable/hmm"
             android:cropToPadding="true"
             android:background="@color/backgroundColor"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop" tools:layout_editor_absoluteY="0dp" tools:layout_editor_absoluteX="0dp"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
             android:layout_marginEnd="@dimen/margin_image"
             android:layout_marginTop="16dp"
             android:background="@color/backgroundColor"
-            android:weightSum="20">
+            android:weightSum="20" android:layout_marginRight="16dp">
         <View
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
@@ -178,11 +178,12 @@
                 android:layout_weight="1"/>
         <Button
                 android:text="@string/btn_accept"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
                 android:id="@+id/btnTandC"
                 android:background="#BBB"
-                android:layout_weight="1"/>
+                android:layout_weight="1" android:layout_gravity="center_horizontal" android:paddingLeft="50dp"
+                android:paddingRight="50dp"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
