@@ -4,6 +4,8 @@
 [![](https://img.shields.io/badge/author-Edona%20Haziraj-darkred.svg)](https://www.github.com/EdonaHaziraj/)
 [![](https://img.shields.io/github/license/460N1/Koha_Per_Barna.svg)](https://github.com/460N1/Koha_Per_Barna/blob/master/LICENSE)
 
+
+[![](https://img.shields.io/github/release/460N1/Koha_Per_Barna.svg)](https://github.com/460N1/Koha_Per_Barna/releases/download/0.3/app-debug.apk)
 [![](https://img.shields.io/github/repo-size/460N1/Koha_Per_Barna.svg)](https://github.com/460N1/Koha_Per_Barna/archive/master.zip)
 [![](https://img.shields.io/github/languages/top/460N1/Koha_Per_Barna.svg)](https://developer.android.com/kotlin)
 
