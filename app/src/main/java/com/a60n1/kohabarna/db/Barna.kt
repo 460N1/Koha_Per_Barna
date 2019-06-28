@@ -6,6 +6,5 @@ class Barna(
     var pershkrimi: String,
     var dataF: String,
     var dataM: String,
-    var doktori: String,
-    var alerts: String
+    var doktori: String
 )

@@ -1,47 +1,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Barna</string>
-    <string name="app_name_nav">Koha per Barna</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="app_name_nav">Koha për Barna!</string>
     <string name="action_settings">Opsione</string>
     <string name="title_activity_side_menu">SideMenu</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Barna</string>
     <string name="nav_header_subtitle1">Agon Hoxha</string>
     <string name="nav_header_subtitle2">Edona Haziraj</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_help">Ndihme</string>
+    <string name="action_help">Ndihmë</string>
     <string name="nav_home">Ballina</string>
-    <string name="nav_search">Kategorite</string>
+    <string name="nav_search">Kategoritë</string>
     <string name="nav_tools">Opsionet</string>
     <string name="nav_play">Play Store</string>
-    <string name="nav_share">Shperndaje</string>
-    <string name="nav_help">Ndihme</string>
+    <string name="nav_share">Shpërndaje</string>
+    <string name="nav_help">Ndihmë</string>
     <string name="nav_about">Rreth Nesh</string>
     <string name="dateHintFormat">DD-MM-YYYY</string>
     <string name="endDate">Data e Mbarimit</string>
     <string name="startDate">Data e Fillimit</string>
     <string name="doktori">Doktori</string>
-    <string name="pershkrimi">Pershkrimi i Barnes</string>
-    <string name="emri">Emri i Barnes</string>
-    <string name="shto">Shto Barnen</string>
+    <string name="pershkrimi">Përshkrimi i Barnës</string>
+    <string name="emri">Emri i Barnës</string>
+    <string name="shto">Shto Barnën</string>
     <string name="btnFshi">Fshij</string>
-    <string name="toastNjoftim">Barna eshte shtuar!</string>
-    <string name="deshtim">Nuk ka te dhena!</string>
+    <string name="toastNjoftim">Barna është shtuar!</string>
+    <string name="deshtim">Nuk ka të dhena!</string>
     <string name="btnFshij">Fshije</string>
     <string name="btnNdrysho">Ndrysho</string>
     <string name="toastNdryshim">Ndryshimi me sukses</string>
-    <string name="fail">Nuk ka barna, apo deshtoj leximi.</string>
+    <string name="fail">Nuk ka barna, apo dështoj leximi.</string>
     <string name="label_scan_finger">Skano Gishtin</string>
-    <string name="hyrja_instruksion">Per te pasur qasje ne aplikacion, nevojitet identifikimi biometrik permes gishtit
-        qe e perdorni per t\'e hapur telefonin.
+    <string name="hyrja_instruksion">Për të pasur qasje në aplikacion, nevojitet identifikimi biometrik përmes gishtit
+        që përdorni për t\'e hapur telefonin.
     </string>
     <string name="fingerprint_content_description">FingerPrint</string>
     <string name="txtVQandS">Pyetje dhe Sygjerime</string>
-    <string name="txt_qands_comment">Duke qene te kushtuar ndaj ofrimit te nje zgjidhje sa me te mire per perdoruesit
-        tone, mundesojme parashtrimin e kerkesave, komenteve, sygjerime dhe pyetjeve qe mund t\'i keni.
+    <string name="txt_qands_comment">Duke qenë të përkushtuar ndaj ofrimit të një zgjidhje sa më të mirë për përdoruesit
+        tonë, mundësojmë parashtrimin e kërkesave, komenteve, sygjerimeve dhe pyetjeve që mund t\'i keni.
     </string>
-    <string name="btn_qands">Dergo</string>
+    <string name="btn_qands">Dërgo</string>
     <string name="nav_email">Pyetje dhe Sygjerime</string>
     <string name="not_accepted">Duhet te pranohen kushtet!</string>
     <string name="txtWelcome">Miresevini!</string>
@@ -49,7 +46,7 @@
     <string name="txtDarkMode">Notifikacione</string>
     <string name="txtSiguria">Siguria</string>
     <string name="txtDMExplain">Aplikacioni lejon krijimin e barnave me notifikacione</string>
-    <string name="txtSigExplain">Nese perkrahet, aplikacioni mbrohet me shenje te gishtit.</string>
+    <string name="txtSigExplain">Nëse perkrahet, aplikacioni mbrohet me shenjë të gishtit.</string>
     <string name="terms_conditions" tools:ignore="TypographyOther,Typos">Këto terma dhe kushte (\"termat\",
         \"marrëveshje\")
         janë një marrëveshje midis
@@ -138,45 +135,37 @@
     <string name="t_c">Termat dhe kushtet</string>
     <string name="accept_conditions">Kam lexuar dhe i pranoj kushtet</string>
     <string name="btn_accept">Vazhdo</string>
-    <string name="content_desc_pills">Foto gjate hapjes se app per here te pare</string>
-    <string name="notification">Koha per Barna!</string>
-    <string name="notification_channel_description">Keni barna qe duhet te perdorni tani.</string>
+    <string name="content_desc_pills">Foto gjatë hapjes së app për herë të parë</string>
+    <string name="notification_channel_description">Keni barna që duhet të përdorni tani.</string>
     <string name="doza_hint">Numri i dozave</string>
-    <string name="toast_njoftim">Do te njoftoheni kur te duhet te perdoret barna</string>
-    <string name="r_u_sure">A jeni te sigurte qe deshironi t\'e fshini kete barne?</string>
+    <string name="toast_njoftim">Do të njoftoheni kur të duhet të përdoret barna</string>
+    <string name="r_u_sure">A jeni të sigurtë që dëshironi t\'e fshini këtë barnë?</string>
     <string name="fshirje_title">Fshirje</string>
-    <string name="delete_success">Barna e zgjedhur eshte fshire nga databaza.</string>
-    <string name="delete_fail">Barna nuk eshte fshire.</string>
+    <string name="delete_success">Barna e zgjedhur është fshirë nga databaza.</string>
+    <string name="delete_fail">Barna nuk është fshirë.</string>
     <string name="delete_cancel">Nuk ka pasur ndryshime.</string>
     <string name="notification_text">Keni barna qe duhet te perdorni tani!</string>
-    <string name="notification_title">Koha per barna!</string>
-    <string name="share_message">Shikojeni aplikacionin Koha per Barna!
+    <string name="share_message">Shikojeni aplikacionin Koha për Barna!\n
         https://play.google.com/store/apps/com.a60n1.kohabarna
     </string>
     <string name="play_link">https://play.google.com/store/apps/com.a60n1.kohabarna</string>
-    <string name="share_title">Koha per Barna</string>
-    <string name="share_c2a">Get it now!</string>
+    <string name="share_c2a">Merreni tani!</string>
     <string name="github_link">https://github.com/460N1/Koha_Per_Barna/blob/master/README.md</string>
-    <string name="auth_failed">Authentication Failed</string>
-    <string name="auth_success">Authentication Success!</string>
+    <string name="auth_failed">Nuk u verifikua identiteti!</string>
+    <string name="auth_success">Identiteti u verifikua!</string>
     <string name="dev_support1">edona.haziraj@gmail.com</string>
     <string name="dev_support2">agon.hoxha@uni-pr.edu</string>
-    <string name="mail_subject"><![CDATA[Koha per Barna / Q&S]]></string>
-    <string name="toast_finmail">Finished sending email…</string>
-    <string name="toast_noclient">There is no email client installed.</string>
+    <string name="mail_subject"><![CDATA[Koha për Barna / Q&S]]></string>
+    <string name="toast_finmail">Emaila është dërguar…</string>
+    <string name="toast_noclient">Nuk keni aplikacion që mund të dërgoj email.</string>
     <string name="option_delete">Fshij barnat</string>
-    <string name="txtOptDel">Fshihen te gjitha barnat nga aplikacioni</string>
+    <string name="txtOptDel">Fshihen të gjitha barnat nga aplikacioni</string>
     <string name="option_reset">Reset</string>
-    <string name="txtOptRes">Kthen aplikacionin ne gjendje fillestare</string>
-    <string name="option_notstop">Ndalo notifikacionet</string>
-    <string name="txtoptstop">Notifikacionet ndalen</string>
-    <string name="option_notstart">Prano notifikacione</string>
-    <string name="txtoptstart">Aplikacionet fillojne perseri</string>
-    <string name="dev_message">Faleminderit per shfrytezim te aplikacionit. \n- Dev Team</string>
+    <string name="txtOptRes">Kthen aplikacionin në gjendje fillestare</string>
+    <string name="dev_message">Faleminderit për shfrytëzim të aplikacionit. \n- Dev Team</string>
     <string name="danger_content_desc">danger</string>
-    <string name="notifications_allowed">lejuara.</string>
-    <string name="notifications_not_allowed">ndaluara.</string>
     <string name="primary_color">#009ABB</string>
     <string name="primary_dark">#09425A</string>
     <string name="red_color_string">#F00</string>
+    <string name="warning_dates">Duhet percaktohen datat!</string>
 </resources>

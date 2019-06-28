@@ -19,11 +19,10 @@ class SQLHelper(context: Context) : SQLiteOpenHelper(
         const val dataFillim = "B_dataF"
         const val dataMbarim = "B_dataM"
         const val doktorri = "B_doktori"
-        const val alerts = "B_alerts"
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL("create table $TB_name(ID INTEGER PRIMARY KEY AUTOINCREMENT, B_emri TEXT, B_pershkrim TEXT, B_dataF TEXT, B_dataM TEXT, B_doktori TEXT, B_alerts TEXT)")
+        db?.execSQL("create table $TB_name(ID INTEGER PRIMARY KEY AUTOINCREMENT, B_emri TEXT, B_pershkrim TEXT, B_dataF TEXT, B_dataM TEXT, B_doktori TEXT)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
@@ -37,8 +36,7 @@ class SQLHelper(context: Context) : SQLiteOpenHelper(
         pershkrimi_text: String,
         dataF_text: String,
         dataM_text: String,
-        dok_text: String,
-        alerts_text: String
+        dok_text: String
     ) {
         val values = ContentValues()
         values.put(emri, emri_text)
@@ -46,7 +44,6 @@ class SQLHelper(context: Context) : SQLiteOpenHelper(
         values.put(dataFillim, dataF_text)
         values.put(dataMbarim, dataM_text)
         values.put(doktorri, dok_text)
-        values.put(alerts, alerts_text)
         this.writableDatabase.insert(TB_name, null, values)
     }
 }

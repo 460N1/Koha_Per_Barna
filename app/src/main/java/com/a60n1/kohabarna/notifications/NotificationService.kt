@@ -51,7 +51,7 @@ class NotificationService : IntentService("NotificationService") {
             val notificationManager: NotificationManager =
                 getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             val notifyIntent = Intent(this, MainActivity::class.java)
-            val title = getString(R.string.notification_title)
+            val title = getString(R.string.app_name_nav)
             val message =
                 getString(R.string.notification_text)
             notifyIntent.putExtra("title", title)

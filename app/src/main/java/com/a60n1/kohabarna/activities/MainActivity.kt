@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 )
             }
             R.id.nav_share -> {
-                val intent = AppInviteInvitation.IntentBuilder(getString(R.string.share_title))
+                val intent = AppInviteInvitation.IntentBuilder(getString(R.string.app_name_nav))
                     .setMessage(getString(R.string.share_message))
                     .setDeepLink(Uri.parse(getString(R.string.play_link)))
                     .setCallToActionText(getString(R.string.share_c2a))
@@ -110,8 +110,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     data.getString(2),
                     data.getString(3),
                     data.getString(4),
-                    data.getString(5),
-                    data.getString(6)
+                    data.getString(5)
                 )
             )
     }

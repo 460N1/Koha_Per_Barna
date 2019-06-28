@@ -24,6 +24,7 @@ class ShtoNdrysho : AppCompatActivity() {
             idDoza.visibility = View.INVISIBLE
         try {
             if (intent.getStringExtra("id").isNotEmpty()) {
+                idDoza.visibility = View.INVISIBLE
                 etEmri.setText(intent.getStringExtra("emri"))
                 etPershkrimi.setText(intent.getStringExtra("pershkrimi"))
                 etDataF.setText(intent.getStringExtra("dataF"))
@@ -31,27 +32,30 @@ class ShtoNdrysho : AppCompatActivity() {
                 etDoktori.setText(intent.getStringExtra("doktori"))
                 btnAdd.text = getString(R.string.btnNdrysho)
                 btnAdd.setOnClickListener {
-                    val emriText = etEmri.text.toString().trim()
-                    val pershkrimiText = etPershkrimi.text.toString().trim()
-                    val dataFText = etDataF.text.toString().trim()
-                    val dataMText = etDataM.text.toString().trim()
-                    val doktoriText = etDoktori.text.toString().trim()
-                    db.deleteData(intent.getStringExtra("id"))
-                    db.addData(
-                        emriText,
-                        pershkrimiText,
-                        dataFText,
-                        dataMText,
-                        doktoriText,
-                        "0"
-                    )
-                    Toast.makeText(
-                        this@ShtoNdrysho,
-                        getString(R.string.toastNdryshim),
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    finish()
-                    startActivity(Intent(this@ShtoNdrysho, MainActivity::class.java))
+                    if (etDataF.text.isEmpty() || etDataM.text.isEmpty())
+                        Toast.makeText(this@ShtoNdrysho, "Duhet percaktohen datat!", Toast.LENGTH_LONG).show()
+                    else {
+                        val emriText = etEmri.text.toString().trim()
+                        val pershkrimiText = etPershkrimi.text.toString().trim()
+                        val dataFText = etDataF.text.toString().trim()
+                        val dataMText = etDataM.text.toString().trim()
+                        val doktoriText = etDoktori.text.toString().trim()
+                        db.deleteData(intent.getStringExtra("id"))
+                        db.addData(
+                            emriText,
+                            pershkrimiText,
+                            dataFText,
+                            dataMText,
+                            doktoriText
+                        )
+                        Toast.makeText(
+                            this@ShtoNdrysho,
+                            getString(R.string.toastNdryshim),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        finish()
+                        startActivity(Intent(this@ShtoNdrysho, MainActivity::class.java))
+                    }
                 }
             }
         } catch (e: Exception) {
@@ -61,45 +65,48 @@ class ShtoNdrysho : AppCompatActivity() {
             )
             etEmri.setAdapter(adapter)
             btnAdd.setOnClickListener {
-                val emriText = etEmri.text.toString().trim()
-                val pershkrimiText = etPershkrimi.text.toString().trim()
-                val dataFText = etDataF.text.toString().trim()
-                val dataMText = etDataM.text.toString().trim()
-                val doktoriText = etDoktori.text.toString().trim()
-                if (prefs.getBoolean("notify", false)) {
-                    val sdf = SimpleDateFormat("dd-MM-yyyy")
-                    val dateStart = sdf.parse(dataFText)
-                    val dateEnd = sdf.parse(dataMText)
-                    val xIntakes = idDoza.text.toString().trim().toInt()
-                    val intakeEvery = 3600000 * 24 / xIntakes //1hour->3.6M milliseconds
-                    val nDays = //Number of Days that the user will use the medication
-                        (dateEnd.time / (24 * 60 * 60 * 1000) - (dateStart.time / (24 * 60 * 60 * 1000)).toInt()).toInt()
-                    var mNotificationTime = Calendar.getInstance().timeInMillis // + firstIntake
-                    for (i in 1..nDays * 24 / xIntakes) {
-                        mNotificationTime += i * intakeEvery
-                        NotificationUtils().setNotification(mNotificationTime, this@ShtoNdrysho)
+                if (etDataF.text.isEmpty() || etDataM.text.isEmpty())
+                    Toast.makeText(this@ShtoNdrysho, getString(R.string.warning_dates), Toast.LENGTH_LONG).show()
+                else {
+                    val emriText = etEmri.text.toString().trim()
+                    val pershkrimiText = etPershkrimi.text.toString().trim()
+                    val dataFText = etDataF.text.toString().trim()
+                    val dataMText = etDataM.text.toString().trim()
+                    val doktoriText = etDoktori.text.toString().trim()
+                    if (prefs.getBoolean("notify", false)) {
+                        val sdf = SimpleDateFormat("dd-MM-yyyy")
+                        val dateStart = sdf.parse(sdf.format(Date()))
+                        val dateEnd = sdf.parse(dataMText)
+                        val xIntakes = idDoza.text.toString().trim().toInt()
+                        val intakeEvery = 3600000 * 24 / xIntakes //1hour->3.6M milliseconds
+                        val nDays = //Number of Days that the user will use the medication
+                            (dateEnd.time / (24 * 60 * 60 * 1000) - (dateStart.time / (24 * 60 * 60 * 1000)).toInt()).toInt()
+                        var mNotificationTime = Calendar.getInstance().timeInMillis // + firstIntake
+                        for (i in 1..nDays * 24 / xIntakes) {
+                            mNotificationTime += i * intakeEvery
+                            NotificationUtils().setNotification(mNotificationTime, this@ShtoNdrysho)
+                        }
+                        Toast.makeText(
+                            this@ShtoNdrysho,
+                            getString(R.string.toast_njoftim),
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
+                    db.addData(
+                        emriText,
+                        pershkrimiText,
+                        dataFText,
+                        dataMText,
+                        doktoriText
+                    )
                     Toast.makeText(
                         this@ShtoNdrysho,
-                        getString(R.string.toast_njoftim),
-                        Toast.LENGTH_LONG
+                        getString(R.string.toastNjoftim),
+                        Toast.LENGTH_SHORT
                     ).show()
+                    finish()
+                    startActivity(Intent(this@ShtoNdrysho, MainActivity::class.java))
                 }
-                db.addData(
-                    emriText,
-                    pershkrimiText,
-                    dataFText,
-                    dataMText,
-                    doktoriText,
-                    "0"
-                )
-                Toast.makeText(
-                    this@ShtoNdrysho,
-                    getString(R.string.toastNjoftim),
-                    Toast.LENGTH_SHORT
-                ).show()
-                finish()
-                startActivity(Intent(this@ShtoNdrysho, MainActivity::class.java))
             }
         }
     }
