@@ -60,7 +60,8 @@ class NotificationService : IntentService("NotificationService") {
             notifyIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             val calendar = Calendar.getInstance()
             calendar.timeInMillis = timestamp
-            val pendingIntent = PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
+            val pendingIntent =
+                PendingIntent.getActivity(context, (0..999).random(), notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT)
             val res = this.resources
             val uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

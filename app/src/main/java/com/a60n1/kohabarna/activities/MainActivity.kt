@@ -85,15 +85,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(
                     Intent(
                         Intent.ACTION_VIEW,
-                        Uri.parse("https://github.com/460N1/Koha_Per_Barna/blob/master/README.md")
+                        Uri.parse(getString(R.string.github_link))
                     )
                 )
             }
             R.id.nav_share -> {
-                val intent = AppInviteInvitation.IntentBuilder("Koha per Barna")
-                    .setMessage("Shikojeni aplikacionin Koha per Barna! https://play.google.com/store/apps/com.a60n1.kohabarna")
-                    .setDeepLink(Uri.parse("https://play.google.com/store/apps/com.a60n1.kohabarna"))
-                    .setCallToActionText("Get it now!")
+                val intent = AppInviteInvitation.IntentBuilder(getString(R.string.share_title))
+                    .setMessage(getString(R.string.share_message))
+                    .setDeepLink(Uri.parse(getString(R.string.play_link)))
+                    .setCallToActionText(getString(R.string.share_c2a))
                     .build()
                 startActivityForResult(intent, 101)
             }

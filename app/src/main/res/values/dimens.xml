@@ -10,4 +10,7 @@
     <dimen name="cardMargin">10dp</dimen>
     <dimen name="cardStyling">20dp</dimen>
     <dimen name="tekstiMargin">10dp</dimen>
+    <dimen name="margin_image">8dp</dimen>
+    <dimen name="image_size">180dp</dimen>
+    <dimen name="addedit_text">18sp</dimen>
 </resources>

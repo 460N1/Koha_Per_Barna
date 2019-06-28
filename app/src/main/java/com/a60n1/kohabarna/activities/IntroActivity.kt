@@ -40,7 +40,7 @@ class IntroActivity : AppCompatActivity(), FingerPrintAuthCallback {
     }
 
     override fun onAuthFailed(errorCode: Int, errorMessage: String?) {
-        toast("Authentication Failed")
+        toast(getString(R.string.auth_failed))
     }
 
     @SuppressLint("SetTextI18n")
@@ -54,7 +54,7 @@ class IntroActivity : AppCompatActivity(), FingerPrintAuthCallback {
     }
 
     override fun onAuthSuccess(cryptoObject: FingerprintManager.CryptoObject?) {
-        toast("Authentication Success!")
+        toast(getString(R.string.auth_success))
         startActivity(applicationContext, Intent(applicationContext, MainActivity::class.java), null)
         finish()
     }

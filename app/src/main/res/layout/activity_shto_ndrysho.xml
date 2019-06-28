@@ -11,7 +11,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnAdd"
             android:background="@drawable/buttons_style"
-            android:textSize="18sp"
+            android:textSize="@dimen/addedit_text"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="35dp"
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txtPrej"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="18sp"/>
+                    android:textSize="@dimen/addedit_text"/>
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
                     android:id="@+id/txtDeri"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_horizontal"
-                    android:textSize="18sp"/>
+                    android:textSize="@dimen/addedit_text"/>
             <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

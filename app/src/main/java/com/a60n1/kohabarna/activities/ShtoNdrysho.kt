@@ -18,7 +18,7 @@ class ShtoNdrysho : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shto_ndrysho)
-        val prefs = this.getSharedPreferences("com.a60n1.kohabarna", Context.MODE_PRIVATE)
+        val prefs = this.getSharedPreferences(packageName, Context.MODE_PRIVATE)
         val db = SQLHelper(applicationContext)
         if (!prefs.getBoolean("notify", false))
             idDoza.visibility = View.INVISIBLE

@@ -17,24 +17,24 @@ class SuggestionsQuestions : AppCompatActivity() {
     }
 
     private fun sendEmail() {
-        val to = arrayOf("edona.haziraj@gmail.com")
-        val cc = arrayOf("agon.hoxha@uni-pr.edu")
+        val to = arrayOf(getString(R.string.dev_support1))
+        val cc = arrayOf(getString(R.string.dev_support2))
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.data = Uri.parse("mailto:")
         emailIntent.type = "text/plain"
         emailIntent.putExtra(Intent.EXTRA_EMAIL, to)
         emailIntent.putExtra(Intent.EXTRA_CC, cc)
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Koha per Barna / Q&S")
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject))
         emailIntent.putExtra(Intent.EXTRA_TEXT, txtQandS.text)
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."))
             finish()
-            Toast.makeText(applicationContext, "Finished sending email...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, getString(R.string.toast_finmail), Toast.LENGTH_SHORT).show()
         } catch (ex: android.content.ActivityNotFoundException) {
             Toast.makeText(
                 applicationContext,
-                "There is no email client installed.", Toast.LENGTH_SHORT
+                getString(R.string.toast_noclient), Toast.LENGTH_SHORT
             ).show()
         }
 

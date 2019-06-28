@@ -149,4 +149,18 @@
     <string name="delete_cancel">Nuk ka pasur ndryshime.</string>
     <string name="notification_text">Keni barna qe duhet te perdorni tani!</string>
     <string name="notification_title">Koha per barna!</string>
+    <string name="share_message">Shikojeni aplikacionin Koha per Barna!
+        https://play.google.com/store/apps/com.a60n1.kohabarna
+    </string>
+    <string name="play_link">https://play.google.com/store/apps/com.a60n1.kohabarna</string>
+    <string name="share_title">Koha per Barna</string>
+    <string name="share_c2a">Get it now!</string>
+    <string name="github_link">https://github.com/460N1/Koha_Per_Barna/blob/master/README.md</string>
+    <string name="auth_failed">Authentication Failed</string>
+    <string name="auth_success">Authentication Success!</string>
+    <string name="dev_support1">edona.haziraj@gmail.com</string>
+    <string name="dev_support2">agon.hoxha@uni-pr.edu</string>
+    <string name="mail_subject"><![CDATA[Koha per Barna / Q&S]]></string>
+    <string name="toast_finmail">Finished sending email…</string>
+    <string name="toast_noclient">There is no email client installed.</string>
 </resources>
