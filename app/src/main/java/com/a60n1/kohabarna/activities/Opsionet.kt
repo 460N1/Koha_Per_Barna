@@ -29,5 +29,11 @@ class Opsionet : AppCompatActivity() {
             deleteAll.performClick()
             exitProcess(0)
         }
+        swiOptSig.setOnClickListener {
+            prefs.edit().putBoolean("siguria", swiOptSig.isChecked).apply()
+        }
+        swiOptNot.setOnClickListener {
+            prefs.edit().putBoolean("notify", swiOptNot.isChecked).apply()
+        }
     }
 }

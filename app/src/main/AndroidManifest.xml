@@ -39,11 +39,9 @@
                 android:excludeFromRecents="true"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar"/>
-
         <receiver
                 android:name=".notifications.AlarmReceiver"
                 android:enabled="true"/>
-
         <service
                 android:name=".notifications.NotificationService"
                 android:enabled="true"/>

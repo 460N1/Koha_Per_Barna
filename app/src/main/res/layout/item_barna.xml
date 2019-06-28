@@ -38,7 +38,7 @@
                         android:id="@+id/tvDataF"
                         android:textSize="@dimen/teksti"
                         android:layout_marginBottom="@dimen/tekstiMargin"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorAccent"
                         android:gravity="center"
                         android:layout_weight="1"/>
                 <TextView
@@ -47,7 +47,7 @@
                         android:id="@+id/tvDataM"
                         android:textSize="@dimen/teksti"
                         android:layout_marginBottom="@dimen/tekstiMargin"
-                        android:textColor="@color/black"
+                        android:textColor="@color/colorAccent"
                         android:gravity="center"
                         android:layout_weight="1"/>
             </LinearLayout>
@@ -57,7 +57,7 @@
                     android:id="@+id/tvId"
                     android:textSize="@dimen/teksti"
                     android:layout_marginBottom="@dimen/tekstiMargin"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorAccent"
                     android:gravity="center"
                     android:visibility="gone"/>
             <TextView
@@ -66,7 +66,7 @@
                     android:id="@+id/tvEmri"
                     android:textSize="@dimen/teksti"
                     android:layout_marginBottom="@dimen/tekstiMargin"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorAccent"
                     android:gravity="center"
                     android:layout_weight="1"
                     android:layout_gravity="center_horizontal"/>
@@ -76,7 +76,7 @@
                     android:id="@+id/tvPershkrimi"
                     android:textSize="@dimen/teksti"
                     android:layout_marginBottom="@dimen/tekstiMargin"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorAccent"
                     android:gravity="center"/>
             <TextView
                     android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                     android:id="@+id/tvDoktori"
                     android:textSize="@dimen/teksti"
                     android:layout_marginBottom="@dimen/tekstiMargin"
-                    android:textColor="@color/black"
+                    android:textColor="@color/colorAccent"
                     android:gravity="center"/>
             <LinearLayout
                     android:orientation="horizontal"

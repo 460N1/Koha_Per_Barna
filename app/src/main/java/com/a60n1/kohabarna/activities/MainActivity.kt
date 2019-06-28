@@ -1,6 +1,5 @@
 package com.a60n1.kohabarna.activities
 
-import android.content.Context
 import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
@@ -12,14 +11,11 @@ import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import com.a60n1.kohabarna.R
 import com.a60n1.kohabarna.db.Adapter
 import com.a60n1.kohabarna.db.Barna
 import com.a60n1.kohabarna.db.SQLHelper
-import com.a60n1.kohabarna.notifications.AlarmReceiver
-import com.a60n1.kohabarna.notifications.NotificationService
 import com.google.android.gms.appinvite.AppInviteInvitation
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -32,22 +28,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val prefs = this.getSharedPreferences(packageName, Context.MODE_PRIVATE)
-        menuBottom.visibility = View.INVISIBLE
-        fab.setOnClickListener {
-            menuBottom.visibility =
-                if (menuBottom.visibility == View.VISIBLE) View.INVISIBLE else View.VISIBLE
-        }
-        fabRem.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Reminder was pressed", Toast.LENGTH_SHORT).show()
-            if (prefs.getBoolean("notify", true)) {
-                stopService(Intent(this, NotificationService::class.java))
-                stopService(Intent(this, AlarmReceiver::class.java))
-            } else {
-                startService(Intent(this, NotificationService::class.java))
-                startService(Intent(this, AlarmReceiver::class.java))
-            }
-        }
         val navView: NavigationView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
         fabAdd.setOnClickListener {
