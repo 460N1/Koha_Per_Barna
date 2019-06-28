@@ -47,8 +47,8 @@
     <string name="txtOpsionet">Percaktoni Opsionet</string>
     <string name="txtDarkMode">Notifikacione</string>
     <string name="txtSiguria">Siguria</string>
-    <string name="txtDMExplain">Aplikacioni lejon notifikacione dhe alarme</string>
-    <string name="txtSigExplain">Nese perkrahet, mbrohet me shenje te gishtit.</string>
+    <string name="txtDMExplain">Aplikacioni lejon krijimin e barnave me notifikacione</string>
+    <string name="txtSigExplain">Nese perkrahet, aplikacioni mbrohet me shenje te gishtit.</string>
     <string name="terms_conditions" tools:ignore="TypographyOther,Typos">Këto terma dhe kushte (\"termat\",
         \"marrëveshje\")
         janë një marrëveshje midis
@@ -163,4 +163,12 @@
     <string name="mail_subject"><![CDATA[Koha per Barna / Q&S]]></string>
     <string name="toast_finmail">Finished sending email…</string>
     <string name="toast_noclient">There is no email client installed.</string>
+    <string name="option_delete">Fshij barnat</string>
+    <string name="txtOptDel">Fshihen te gjitha barnat nga aplikacioni</string>
+    <string name="option_reset">Reset</string>
+    <string name="txtOptRes">Kthen aplikacionin ne gjendje fillestare</string>
+    <string name="option_notstop">Ndalo notifikacionet</string>
+    <string name="txtoptstop">Notifikacionet ndalen</string>
+    <string name="option_notstart">Prano notifikacione</string>
+    <string name="txtoptstart">Aplikacionet fillojne perseri</string>
 </resources>

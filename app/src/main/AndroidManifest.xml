@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        package="com.a60n1.kohabarna">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.a60n1.kohabarna">
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -12,33 +12,41 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
         <activity
+                android:name=".activities.Opsionet"
+                android:parentActivityName=".activities.MainActivity"/>
+        <activity
                 android:name=".activities.WelcomeActivity"
                 android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
+
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".activities.SuggestionsQuestions"
-                  android:parentActivityName="com.a60n1.kohabarna.activities.MainActivity"/>
+        <activity
+                android:name=".activities.SuggestionsQuestions"
+                android:parentActivityName=".activities.MainActivity"/>
         <activity
                 android:name=".activities.IntroActivity"
-                android:theme="@style/AppTheme.NoActionBar"
-                android:excludeFromRecents="true"/>
+                android:excludeFromRecents="true"
+                android:theme="@style/AppTheme.NoActionBar"/>
         <activity
                 android:name=".activities.ShtoNdrysho"
                 android:excludeFromRecents="true"
-                android:parentActivityName="com.a60n1.kohabarna.activities.MainActivity"/>
+                android:parentActivityName=".activities.MainActivity"/>
         <activity
                 android:name=".activities.MainActivity"
+                android:excludeFromRecents="true"
                 android:label="@string/app_name"
-                android:theme="@style/AppTheme.NoActionBar"
-                android:excludeFromRecents="true"/>
+                android:theme="@style/AppTheme.NoActionBar"/>
+
         <receiver
                 android:name=".notifications.AlarmReceiver"
                 android:enabled="true"/>
+
         <service
                 android:name=".notifications.NotificationService"
                 android:enabled="true"/>
     </application>
+
 </manifest>

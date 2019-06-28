@@ -13,4 +13,5 @@
     <dimen name="margin_image">8dp</dimen>
     <dimen name="image_size">180dp</dimen>
     <dimen name="addedit_text">18sp</dimen>
+    <dimen name="option_margin">20dp</dimen>
 </resources>

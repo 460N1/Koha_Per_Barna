@@ -1,5 +1,6 @@
 package com.a60n1.kohabarna.activities
 
+import android.content.Context
 import android.content.Intent
 import android.database.Cursor
 import android.net.Uri
@@ -17,6 +18,8 @@ import com.a60n1.kohabarna.R
 import com.a60n1.kohabarna.db.Adapter
 import com.a60n1.kohabarna.db.Barna
 import com.a60n1.kohabarna.db.SQLHelper
+import com.a60n1.kohabarna.notifications.AlarmReceiver
+import com.a60n1.kohabarna.notifications.NotificationService
 import com.google.android.gms.appinvite.AppInviteInvitation
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -29,6 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val prefs = this.getSharedPreferences(packageName, Context.MODE_PRIVATE)
         menuBottom.visibility = View.INVISIBLE
         fab.setOnClickListener {
             menuBottom.visibility =
@@ -36,7 +40,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
         fabRem.setOnClickListener {
             Toast.makeText(this@MainActivity, "Reminder was pressed", Toast.LENGTH_SHORT).show()
-            //TODO: MUTE NOTIFICATION FUNCTION
+            if (prefs.getBoolean("notify", true)) {
+                stopService(Intent(this, NotificationService::class.java))
+                stopService(Intent(this, AlarmReceiver::class.java))
+            } else {
+                startService(Intent(this, NotificationService::class.java))
+                startService(Intent(this, AlarmReceiver::class.java))
+            }
         }
         val navView: NavigationView = findViewById(R.id.nav_view)
         navView.setNavigationItemSelectedListener(this)
@@ -66,7 +76,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_tools -> {
-                //TODO:CREATE ACTIVITY FOR OPTIONS
+                startActivity(Intent(this@MainActivity, Opsionet::class.java))
             }
             R.id.nav_playstore -> {
                 val appPackageName = packageName // getPackageName() from Context or Activity object
