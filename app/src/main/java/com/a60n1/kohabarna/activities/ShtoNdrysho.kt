@@ -53,8 +53,8 @@ class ShtoNdrysho : AppCompatActivity() {
                             getString(R.string.toastNdryshim),
                             Toast.LENGTH_SHORT
                         ).show()
-                        finish()
                         startActivity(Intent(this@ShtoNdrysho, MainActivity::class.java))
+                        finish()
                     }
                 }
             }
@@ -104,8 +104,8 @@ class ShtoNdrysho : AppCompatActivity() {
                         getString(R.string.toastNjoftim),
                         Toast.LENGTH_SHORT
                     ).show()
-                    finish()
                     startActivity(Intent(this@ShtoNdrysho, MainActivity::class.java))
+                    finish()
                 }
             }
         }

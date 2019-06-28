@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navView.setNavigationItemSelectedListener(this)
         fabAdd.setOnClickListener {
             startActivity(Intent(this@MainActivity, ShtoNdrysho::class.java))
+            finish()
         }
         lists = ArrayList()
         db = SQLHelper(applicationContext)
