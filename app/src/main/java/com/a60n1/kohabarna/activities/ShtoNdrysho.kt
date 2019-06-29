@@ -19,20 +19,28 @@ class ShtoNdrysho : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shto_ndrysho)
         val prefs = this.getSharedPreferences(packageName, Context.MODE_PRIVATE)
+        //^marrim qasje ne settings
         val db = SQLHelper(applicationContext)
+        //^marrim qasje ne databaze
         if (!prefs.getBoolean("notify", false))
             idDoza.visibility = View.INVISIBLE
-        try {
+        //^nese notifikacionet nuk jane te lejuara, fshehet opsioni per doza
+        try {//FUNKSIONI PER EDIT
             if (intent.getStringExtra("id").isNotEmpty()) {
+                //^behet check nese ka id ne intent - metoda per te ditur a eshte prekur edit
                 idDoza.visibility = View.INVISIBLE
+                //^fshehet doza
                 etEmri.setText(intent.getStringExtra("emri"))
                 etPershkrimi.setText(intent.getStringExtra("pershkrimi"))
                 etDataF.setText(intent.getStringExtra("dataF"))
                 etDataM.setText(intent.getStringExtra("dataM"))
                 etDoktori.setText(intent.getStringExtra("doktori"))
+                //^merren dhe vendosen te dhenat neper editTexts nga intenti
                 btnAdd.text = getString(R.string.btnNdrysho)
+                //^ndrrohet teksti i butonit nga Shto ne Ndrysho
                 btnAdd.setOnClickListener {
                     if (etDataF.text.isEmpty() || etDataM.text.isEmpty())
+                    //^nese nuk jane te definuar dataFillim ose dataMbarim
                         Toast.makeText(this@ShtoNdrysho, "Duhet percaktohen datat!", Toast.LENGTH_LONG).show()
                     else {
                         val emriText = etEmri.text.toString().trim()
@@ -40,7 +48,9 @@ class ShtoNdrysho : AppCompatActivity() {
                         val dataFText = etDataF.text.toString().trim()
                         val dataMText = etDataM.text.toString().trim()
                         val doktoriText = etDoktori.text.toString().trim()
+                        //^merr te dhenat nga editTexts
                         db.deleteData(intent.getStringExtra("id"))
+                        //^fshihet barna ne fjale nga databaza
                         db.addData(
                             emriText,
                             pershkrimiText,
@@ -48,22 +58,26 @@ class ShtoNdrysho : AppCompatActivity() {
                             dataMText,
                             doktoriText
                         )
+                        //^shtohet ne databaze barna qe posa u ndryshua
                         Toast.makeText(
                             this@ShtoNdrysho,
                             getString(R.string.toastNdryshim),
                             Toast.LENGTH_SHORT
                         ).show()
                         startActivity(Intent(this@ShtoNdrysho, MainActivity::class.java))
+                        //^hapet MainActivity
                         finish()
                     }
                 }
             }
-        } catch (e: Exception) {
+        } catch (e: Exception) {//RASTI PER ADD
             val adapter = ArrayAdapter(
                 this,
                 android.R.layout.simple_dropdown_item_1line, medicine
             )
+            //^percaktojme adapterin qe do perdoret, dizajni dhe lista e items
             etEmri.setAdapter(adapter)
+            //^percaktojme qe etEmri te perdor adapterin
             btnAdd.setOnClickListener {
                 if (etDataF.text.isEmpty() || etDataM.text.isEmpty())
                     Toast.makeText(this@ShtoNdrysho, getString(R.string.warning_dates), Toast.LENGTH_LONG).show()
@@ -73,18 +87,29 @@ class ShtoNdrysho : AppCompatActivity() {
                     val dataFText = etDataF.text.toString().trim()
                     val dataMText = etDataM.text.toString().trim()
                     val doktoriText = etDoktori.text.toString().trim()
+                    //^njejt si paraprakisht
                     if (prefs.getBoolean("notify", false)) {
+                        //^nese notifikacione jane ON
                         val sdf = SimpleDateFormat("dd-MM-yyyy")
+                        //^percaktojme formatin qe kemi perdorur
                         val dateStart = sdf.parse(sdf.format(Date()))
+                        //^marrim daten e sotme
                         val dateEnd = sdf.parse(dataMText)
+                        //^marrim daten e mbarimit
                         val xIntakes = idDoza.text.toString().trim().toInt()
+                        //^marrim numren e dozanve
                         val intakeEvery = 3600000 * 24 / xIntakes //1hour->3.6M milliseconds
+                        //^logarisim kohen pas te ciles duhet njoftuar
                         val nDays = //Number of Days that the user will use the medication
                             (dateEnd.time / (24 * 60 * 60 * 1000) - (dateStart.time / (24 * 60 * 60 * 1000)).toInt()).toInt()
+                        //^llogarisim numrin e diteve qe do duhet te behen notifikacione
                         var mNotificationTime = Calendar.getInstance().timeInMillis // + firstIntake
+                        //^percaktojme kohen
                         for (i in 1..nDays * 24 / xIntakes) {
                             mNotificationTime += i * intakeEvery
+                            //^koha merr vlera te ndryshme
                             NotificationUtils().setNotification(mNotificationTime, this@ShtoNdrysho)
+                            //^vendoset notifikacion ne "orar"
                         }
                         Toast.makeText(
                             this@ShtoNdrysho,
@@ -99,6 +124,7 @@ class ShtoNdrysho : AppCompatActivity() {
                         dataMText,
                         doktoriText
                     )
+                    //^shtohet ne databaze
                     Toast.makeText(
                         this@ShtoNdrysho,
                         getString(R.string.toastNjoftim),
@@ -111,6 +137,7 @@ class ShtoNdrysho : AppCompatActivity() {
         }
     }
 
+    // \/\/\/ lista e barnave
     private val medicine: Array<String>
         get() = arrayOf(
             "Abacavir Sulfate",

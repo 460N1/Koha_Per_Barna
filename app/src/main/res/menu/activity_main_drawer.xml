@@ -27,6 +27,11 @@
                     android:id="@+id/nav_email"
                     android:icon="@android:drawable/ic_dialog_email"
                     android:title="@string/nav_email"/>
+            <!--<item-->
+            <!--android:id="@+id/nav_email"-->
+            <!--Ni qesi me tha me shtu-->
+            <!--android:icon="@android:drawable/ic_dialog_email"-->
+            <!--android:title="@string/nav_email"/>-->
         </menu>
     </item>
 </menu>

@@ -8,3 +8,4 @@ class Barna(
     var dataM: String,
     var doktori: String
 )
+//^si definohet nje barne ne databaze

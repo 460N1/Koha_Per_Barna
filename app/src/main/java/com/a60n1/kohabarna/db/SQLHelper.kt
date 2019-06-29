@@ -19,18 +19,24 @@ class SQLHelper(context: Context) : SQLiteOpenHelper(
         const val dataFillim = "B_dataF"
         const val dataMbarim = "B_dataM"
         const val doktorri = "B_doktori"
+        //^percaktojme emrin e db, tb dhe kolonave
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.execSQL("create table $TB_name(ID INTEGER PRIMARY KEY AUTOINCREMENT, B_emri TEXT, B_pershkrim TEXT, B_dataF TEXT, B_dataM TEXT, B_doktori TEXT)")
+        //^krijohet databaza
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS $TB_name")
+        //^ne rast te pertrirjes te db (nuk aplikohet te na po qishtu definohet)
     }
 
     fun deleteData(id: String): Int = this.writableDatabase.delete(TB_name, "id = ?", arrayOf(id))
+    //^fshirja behet permes id te barnes
     val dataGet: Cursor get() = this.writableDatabase.rawQuery("SELECT * FROM $TB_name", null)
+
+    //^marrja e te gjitha te dhenave qe jon ne databaze
     fun addData(
         emri_text: String,
         pershkrimi_text: String,
@@ -46,4 +52,5 @@ class SQLHelper(context: Context) : SQLiteOpenHelper(
         values.put(doktorri, dok_text)
         this.writableDatabase.insert(TB_name, null, values)
     }
+    //^shtuarja e te dhenave ndatabaze
 }
