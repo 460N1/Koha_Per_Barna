@@ -1,5 +1,6 @@
 # Koha per Barna
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/aaab54aadeb142c2a91c778ed3f5c8cc)](https://app.codacy.com/manual/lexmercer96/Koha_Per_Barna?utm_source=github.com&utm_medium=referral&utm_content=460N1/Koha_Per_Barna&utm_campaign=Badge_Grade_Dashboard)
 [![](https://img.shields.io/badge/author-Agon%20Hoxha-black.svg)](https://www.github.com/460N1/)
 [![](https://img.shields.io/badge/author-Edona%20Haziraj-darkred.svg)](https://www.github.com/EdonaHaziraj/)
 [![](https://img.shields.io/github/license/460N1/Koha_Per_Barna.svg)](https://github.com/460N1/Koha_Per_Barna/blob/master/LICENSE)
